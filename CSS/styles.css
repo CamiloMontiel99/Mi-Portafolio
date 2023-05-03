@@ -222,6 +222,8 @@ section h2 {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
+    align-content: space-between;
+    align-items: center;
 }
 
 #habilidades .frontend-section .img-frontend {
