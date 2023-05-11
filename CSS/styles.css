@@ -6,16 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    max-width: 100vw;
-}
-
-header {
-    height: 100vh;
-    max-width: 100vw;
-}
-
 .nav {
     display: flex;
     justify-content: center;
@@ -31,8 +21,9 @@ header {
     margin: 10px 10px;
     background-color: #2e2d2da3;
     border-radius: 15px;
-}
+    z-index: 100;
 
+}
 
 .nav #menu li a {
     text-decoration: none;
@@ -66,8 +57,8 @@ li {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 100vh;
-    width: 100%;
+    max-width: 100vw;
+    padding: 30px;
     background-image: url(../img/fondo-cuadricula-digital-abstracto-negro.jpg);
     background-size: cover;
 }
@@ -161,11 +152,10 @@ li {
 }
 
 section {
-    height: 100vh;
     max-width: 100vw;
     background-image: url(../img/fondo-2.png);
     background-size: cover;
-    border-top: 5px solid rgba(59, 203, 203, 0.5);
+    border-top: 2px solid rgba(59, 203, 203, 0.5);
 }
 
 section h2 {
@@ -173,15 +163,20 @@ section h2 {
     font-size: 42px;
     justify-content: center;
     align-items: center;
-    height: 20%;
+    margin: 30px 0px;
     align-items: center;
     width: 100%;
     background-color: #36131300;
 }
 
+.sections {
+    height: 100vh;
+}
+
 #habilidades {
     display: flex;
     justify-content: space-evenly;
+    align-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
     height: 100vh;
@@ -190,12 +185,10 @@ section h2 {
 }
 
 #habilidades .secciones {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
     width: 450px;
-    height: 350px;
-    margin: 20px 20px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    margin: 20px;
     padding: 20px;
     border: 2px solid rgba(59, 203, 203, 0.5);
     border-radius: 20px;
@@ -205,6 +198,7 @@ section h2 {
 #habilidades .secciones h3 {
     display: flex;
     justify-content: center;
+    background: transparent;
     font-size: 28px;
     width: 100%;
     margin-bottom: 30px;
@@ -219,42 +213,31 @@ section h2 {
 
 #habilidades .img-secciones {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
     width: 100%;
+    height: auto;
+    background: transparent;
 }
 
-#habilidades .frontend-section .img-frontend {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-}
 
 #habilidades .secciones img {
     display: flex;
     justify-content: space-evenly;
     background-color: #36131300;
     background-size: cover;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
     object-fit: cover;
 }
 
-/* #habilidades .articles .frontend-section img:nth-child(1) {
-    
-}
-
-#habilidades .articles .frontend-section img:nth-child(2) {
-    
-} */
-
 #habilidades .frontend-section img:nth-child(3) {
     display: flex;
-    width: 140px;
-    height: 140px;
+    height: 120px;
+    width: 120px;
     object-fit: contain;
-    padding: 0px;
 }
 
 #proyectos {
@@ -293,117 +276,33 @@ footer {
     border-top: 5px solid rgba(59, 203, 203, 0.5);
 }
 
+@media (max-width: 1019px) {
 
-
-@media (max-width: 1180px) {
-    
-    #habilidades{
-        display: flex;
-        overflow: hidden;
-        padding: 10px;
-        height: 100vh;
-        justify-content: space-evenly;
-    }
-
-    #habilidades .titulo {
-        display: none;
-    }
-
+    #habilidades,
     #habilidades .secciones {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
+        height: auto;
     }
 
-    #habilidades .secciones img {
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        margin-bottom: 20px;
-        object-fit: cover;
-        
-    }
-
-    #habilidades .titulo {
-        width: 20%;
-        height: 100vh;
-        margin-right: 24px;
-    }
-}
-
-@media (max-width: 850px) {
-    #habilidades .titulo {
-        display: none;
-    }
-
-    #habilidades{
-        display: flex;
-        overflow: hidden;
-        padding: 10px;
-        height: 100vh;
-        justify-content: space-evenly;
-    }
-
-    #habilidades .secciones {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 10px;
-    }
-
-    #habilidades .secciones img {
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        margin-bottom: 20px;
-        object-fit: cover;
-    }
-
-    #habilidades .secciones .frontend-section img:nth-child(3){
+    #habilidades .frontend-section img:nth-child(3){
         height: 120px;
         width: 120px;
         object-fit: cover;
     }
+}
+    
+@media (max-width: 890px) {
+
+    .contenido-inicio {
+        flex-direction: column;
+    }
+
+    .contenido-inicio .mi-foto img {
+        width: 50%;
+    }
+    .contenido-inicio .titulo {
+        font-size: 50px;    
+    }
+    .contenido-inicio .mi-foto p {
+        font-size: 40px;
+    }
 } 
-
-@media (max-width: 454px) { 
-    #habilidades {
-        height: 120vh;
-    }
-    .contenido-inicio .flecha-abajo {
-        display: none;
-    }
-}
-
-@media (max-width: 304px) {
-    #habilidades {
-        height: 140vh;
-    }
-    .contenido-inicio .flecha-abajo {
-        display: none;
-    }
-    #habilidades .secciones {
-        margin: 5px;
-    }
-}
-
-@media (max-width: 1509px) {
-    #habilidades .secciones {
-        height: 300px;
-    }
-
-    #habilidades h2 {
-        align-items: center;
-        height: 10%;
-    }
-}
-
-@media (max-width: 999px) {
-    #habilidades .secciones {
-        height: 300px;
-    }
-
-    #habilidades h2 {
-        height: 10%;
-    }
-}
