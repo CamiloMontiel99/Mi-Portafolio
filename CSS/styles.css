@@ -261,6 +261,7 @@ section h2 {
 }
 
 #contacto form button {
+    
     display: flex;
     border-radius: 20px;
     font-size: 20px;
@@ -291,7 +292,7 @@ footer {
         object-fit: cover;
     }
 }
-    
+
 @media (max-width: 890px) {
 
     .contenido-inicio {
@@ -307,4 +308,4 @@ footer {
     .contenido-inicio .mi-foto p {
         font-size: 40px;
     }
-} 
+}
